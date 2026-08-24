@@ -60,6 +60,25 @@ in
             password = "$WIFI_MMA_PASSWORD";
           };
         };
+        "UECWireless" = {
+          connection = {
+            id = "UECWireless";
+            type = "wifi";
+          };
+          wifi = {
+            mode = "infrastructure";
+            ssid = "UECWireless";
+          };
+          wifi-security = {
+            key-mgmt = "wpa-eap";
+          };
+          "802-1x" = {
+            eap = "peap";
+            identity = "$WIFI_UEC_USERNAME";
+            phase2-auth = "mschapv2";
+            password = "$WIFI_UEC_PASSWORD";
+          };
+        };
       };
     };
   };
