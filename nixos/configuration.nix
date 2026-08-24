@@ -123,7 +123,7 @@ in
 
   sops = {
   	age.keyFile = ageKeyFile;
-  	defaultSopsFile = ./secrets/secrets.yaml
+  	defaultSopsFile = ./secrets/secrets.yaml;
     secrets = {
       "wifi-env" = {};
     };
