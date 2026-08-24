@@ -19,7 +19,50 @@ in
   networking.hostName = "tomo-nix"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+  	enable = true;
+    ensureProfiles = {
+      environmentFiles = [
+        config.sops.secrets."wifi-env".path
+      ];
+      profiles = {
+        "Home-WiFi" = {
+          connection = {
+            id = "Home-WiFi";
+            type = "wifi";
+          };
+          wifi = {
+            mode = "infrastructure";
+            ssid = "$$WIFI_HOME_SSID";
+          };
+          wifi-security = {
+            auth-alg = "open";
+            key-mgmt = "wpa-psk";
+            psk = "$$WIFI_HOME_PSK";
+          };
+        };
+        "MMA-WiFi" = {
+          connection = {
+            id = "MMA-WiFi";
+            type = "wifi";
+          };
+          wifi = {
+            mode = "infrastructure";
+            ssid = "$$WIFI_MMA_SSID";
+          };
+          wifi-security = {
+            key-mgmt = "wpa-eap";
+          };
+          "802-1x" = {
+            eap = "peap;";
+            identity = "$$WIFI_MMA_USERNAME";
+            phase2-auth = "mschapv2;";
+            password = "$$WIFI_MMA_PASSWORD";
+          };
+        };
+      };
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
@@ -71,7 +114,6 @@ in
     libreoffice
     firefox
     micro
-    sops
   ];
 
   programs.sway = {
@@ -82,7 +124,7 @@ in
   sops = {
   	age.keyFile = ageKeyFile;
     secrets = {
-      
+      "wifi-env" = {};
     };
   };
 
