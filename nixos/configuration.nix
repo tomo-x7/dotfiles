@@ -87,7 +87,7 @@ in
   };
 
   environment.variables = {
-    $EDITOR = "micro";  	
+    EDITOR = "micro";  	
   };
 
   # Open ports in the firewall.
