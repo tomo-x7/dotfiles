@@ -86,7 +86,7 @@ in
     };
   };
 
-  environment.variables = {
+  environment.sessionVariables = {
     EDITOR = "micro";  	
   };
 
