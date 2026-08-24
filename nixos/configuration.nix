@@ -54,7 +54,7 @@ in
             key-mgmt = "wpa-eap";
           };
           "802-1x" = {
-            eap = [ "peap" ];
+            eap = "peap";
             identity = "$$WIFI_MMA_USERNAME";
             phase2-auth = "mschapv2";
             password = "$$WIFI_MMA_PASSWORD";
