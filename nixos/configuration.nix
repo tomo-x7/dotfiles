@@ -33,12 +33,12 @@ in
           };
           wifi = {
             mode = "infrastructure";
-            ssid = "$$WIFI_HOME_SSID";
+            ssid = "$WIFI_HOME_SSID";
           };
           wifi-security = {
             auth-alg = "open";
             key-mgmt = "wpa-psk";
-            psk = "$$WIFI_HOME_PSK";
+            psk = "$WIFI_HOME_PSK";
           };
         };
         "MMA-WiFi" = {
@@ -48,16 +48,16 @@ in
           };
           wifi = {
             mode = "infrastructure";
-            ssid = "$$WIFI_MMA_SSID";
+            ssid = "$WIFI_MMA_SSID";
           };
           wifi-security = {
             key-mgmt = "wpa-eap";
           };
           "802-1x" = {
             eap = "peap";
-            identity = "$$WIFI_MMA_USERNAME";
+            identity = "$WIFI_MMA_USERNAME";
             phase2-auth = "mschapv2";
-            password = "$$WIFI_MMA_PASSWORD";
+            password = "$WIFI_MMA_PASSWORD";
           };
         };
       };
