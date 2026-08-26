@@ -132,6 +132,7 @@ in
     firefox
     micro
     tree
+    home-manager
     
   ];
 

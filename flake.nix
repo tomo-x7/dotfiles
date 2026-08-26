@@ -29,6 +29,7 @@
     	};
     };
     homeConfigurations.tomo = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
       modules = [ (import homenix) ];
     };
     devShells.${system}.sops = pkgs.mkShell {
