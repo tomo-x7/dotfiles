@@ -133,7 +133,7 @@ in
     micro
     tree
     home-manager
-    
+    fastfetch
   ];
 
   programs.fish.enable = true;

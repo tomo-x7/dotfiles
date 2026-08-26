@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/tomo";
   home.stateVersion = "26.11";
   home.packages = with pkgs; [
-    
+    gimp
   ];
   programs.git = {
     enable = true;
