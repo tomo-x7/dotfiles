@@ -123,9 +123,6 @@ in
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
-    packages = with pkgs; [
-      tree
-    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -134,6 +131,8 @@ in
     libreoffice
     firefox
     micro
+    tree
+    
   ];
 
   programs.fish.enable = true;
