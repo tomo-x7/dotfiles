@@ -135,10 +135,16 @@ in
     micro
   ];
 
+  programs.fish.enable = true;
+
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
   };
+
+  i18n.inputMethod.type = "ibus";
+  i18n.inputMethod.ibus.waylandFrontend = true;
+  i18n.inputMethod.ibus.engines = [ "mozc" ];
 
   sops = {
   	age.keyFile = ageKeyFile;
