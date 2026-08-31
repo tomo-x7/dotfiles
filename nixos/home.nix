@@ -17,7 +17,7 @@
   };
 
   home.file = {
-    ".config/sway/config".source = ./sway/config;
+    ".config/sway/config".source = ../sway/config;
   };
 
   programs.home-manager.enable = true;
