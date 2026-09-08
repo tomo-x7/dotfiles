@@ -134,6 +134,7 @@ in
     tree
     home-manager
     fastfetch
+    dnsutils
   ];
 
   programs.fish.enable = true;
