@@ -15,9 +15,20 @@
       email = "158121497+tomo-x7@users.noreply.github.com";
     };
   };
+h
+  xdg.configFile = {
+    "sway/config".source = ../sway/config;
+    # "waybar/config.jsonc".source = ../waybar/config.jsonc;
+  };
 
-  home.file = {
-    ".config/sway/config".source = ../sway/config;
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+
+  programs.waybar = {
+    enable = true;
+    
   };
 
   programs.home-manager.enable = true;

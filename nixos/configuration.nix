@@ -103,7 +103,7 @@ in
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+hhh  services.printing.enable = true;
 
   # Enable sound.
   security.rtkit.enable = true;
@@ -138,11 +138,6 @@ in
   ];
 
   programs.fish.enable = true;
-
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
 
   i18n.inputMethod.enable = true;
   i18n.inputMethod.type = "fcitx5";
@@ -186,6 +181,7 @@ in
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
+      font-awesome_4
     ];
   
     # システム全体のフォールバック順序を日本語優先にする
