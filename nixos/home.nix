@@ -15,7 +15,7 @@
       email = "158121497+tomo-x7@users.noreply.github.com";
     };
   };
-h
+  
   xdg.configFile = {
     "sway/config".source = ../sway/config;
     # "waybar/config.jsonc".source = ../waybar/config.jsonc;
