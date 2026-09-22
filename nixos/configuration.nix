@@ -139,6 +139,11 @@ in
 
   programs.fish.enable = true;
 
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+
   i18n.inputMethod.enable = true;
   i18n.inputMethod.type = "fcitx5";
   i18n.inputMethod.fcitx5.waylandFrontend = true;

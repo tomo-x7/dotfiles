@@ -21,11 +21,6 @@
     # "waybar/config.jsonc".source = ../waybar/config.jsonc;
   };
 
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
-
   programs.waybar = {
     enable = true;
     
