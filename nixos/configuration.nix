@@ -121,7 +121,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tomo = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" "audio" "input" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
 
@@ -135,6 +135,8 @@ in
     home-manager
     fastfetch
     dnsutils
+    pavucontrol
+    adwaita-icon-theme
   ];
 
   programs.fish.enable = true;
