@@ -103,7 +103,7 @@ in
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-hhh  services.printing.enable = true;
+  services.printing.enable = true;
 
   # Enable sound.
   security.rtkit.enable = true;
