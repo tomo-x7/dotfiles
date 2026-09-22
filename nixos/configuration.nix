@@ -179,6 +179,25 @@ in
     EDITOR = "micro";  	
   };
 
+  fonts = {
+    # 必要最低限の日本語 CJK フォントをインストール
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-emoji
+    ];
+  
+    # システム全体のフォールバック順序を日本語優先にする
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Noto Serif CJK JP" "Noto Serif" ];
+        sansSerif = [ "Noto Sans CJK JP" "Noto Sans" ];
+        monospace = [ "Noto Sans Mono CJK JP" "Noto Sans Mono" ];
+      };
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
