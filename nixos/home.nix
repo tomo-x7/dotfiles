@@ -18,7 +18,7 @@
   
   xdg.configFile = {
     "sway/config".source = ../sway/config;
-    # "waybar/config.jsonc".source = ../waybar/config.jsonc;
+    "waybar".source = ../waybar;
   };
 
   programs.waybar = {
