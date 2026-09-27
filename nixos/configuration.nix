@@ -201,6 +201,28 @@ in
     };
   };
 
+  services.tlp = {
+    enable = true;
+    pd.enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      AMD_CORE_BOOST_ON_AC = 1;
+      AMD_CORE_BOOST_ON_BAT = 0;
+      RADEON_DPM_PERF_LEVEL_ON_AC = "high";
+      RADEON_DPM_PERF_LEVEL_ON_BAT = "low";
+      PLATFORM_PROFILE_ON_AC = "performance";
+      PLATFORM_PROFILE_ON_BAT = "low-power";
+      WIRELESS_POWER_SAVING_ON_AC = 1;
+      WIRELESS_POWER_SAVING_ON_BAT = 5;
+      SOUND_POWER_SAVE_ON_AC = 0;
+      SOUND_POWER_SAVE_ON_BAT = 1;
+      USB_AUTOSUSPEND = 1;
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
