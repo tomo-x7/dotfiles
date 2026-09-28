@@ -137,6 +137,7 @@ in
     dnsutils
     pavucontrol
     adwaita-icon-theme
+    bluetui
   ];
 
   programs.fish.enable = true;
