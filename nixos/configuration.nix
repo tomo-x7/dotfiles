@@ -83,6 +83,8 @@ in
     };
   };
 
+  hardware.bluetooth.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
@@ -121,7 +123,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tomo = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "input" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" "audio" "input" "bluetooth"]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
   };
 
@@ -137,6 +139,7 @@ in
     dnsutils
     pavucontrol
     adwaita-icon-theme
+    bluez
     bluetui
   ];
 
