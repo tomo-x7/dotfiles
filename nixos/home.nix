@@ -40,5 +40,13 @@
     };
   };
 
+  home.sessionVariables = {
+    PNPM_HOME = "$HOME/.local/share/pnpm";
+  };
+
+  home.sessionPath = [
+    "$HOME/.local/share/pnpm"
+  ];
+
   programs.home-manager.enable = true;
 }
