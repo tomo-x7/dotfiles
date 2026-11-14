@@ -141,6 +141,7 @@ in
     adwaita-icon-theme
     bluez
     bluetui
+    avahi
   ];
 
   programs.fish.enable = true;
@@ -226,6 +227,8 @@ in
       USB_AUTOSUSPEND = 1;
     };
   };
+
+  programs.nix-ld.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

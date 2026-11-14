@@ -7,6 +7,9 @@
   home.packages = with pkgs; [
     gimp
     wezterm
+    vscode
+    pnpm_11
+    
   ];
   programs.git = {
     enable = true;
