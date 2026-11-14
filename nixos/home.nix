@@ -9,6 +9,7 @@
     wezterm
     vscode
     pnpm_11
+    nodejs_26
     
   ];
   programs.git = {
@@ -45,8 +46,10 @@
   };
 
   home.sessionPath = [
+    "$HOME/.local/share/pnpm/bin"
     "$HOME/.local/share/pnpm"
   ];
 
   programs.home-manager.enable = true;
+  nixpkgs.config.allowUnfree = true;
 }
