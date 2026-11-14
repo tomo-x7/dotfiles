@@ -229,6 +229,7 @@ in
   };
 
   programs.nix-ld.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
