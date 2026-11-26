@@ -225,6 +225,7 @@ in
       SOUND_POWER_SAVE_ON_AC = 0;
       SOUND_POWER_SAVE_ON_BAT = 1;
       USB_AUTOSUSPEND = 1;
+      USB_DENYLIST = "0b95:1790";
     };
   };
 
