@@ -52,4 +52,7 @@
 
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
+  programs.neovim = {
+    enable = true;
+  };
 }

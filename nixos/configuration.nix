@@ -36,9 +36,9 @@ in
             ssid = "$WIFI_HOME_SSID";
           };
           wifi-security = {
-            auth-alg = "open";
-            key-mgmt = "wpa-psk";
+            key-mgmt = "sae";
             psk = "$WIFI_HOME_PSK";
+            pmf = 3;
           };
         };
         "MMA-WiFi" = {
@@ -260,7 +260,7 @@ in
 
   fileSystems."/data" = {
     device = "/dev/disk/by-uuid/53e8bee4-b72f-4227-88a8-ef48ae9ff588";
-    fsType = "btrfs"; // ファイルシステムの種類 (ext4, btrfs, ntfs3 など)
-    options = [ "defaults" "nofail" ]; // nofailをつけると起動時にデバイスがなくてもエラーで止まらない
+    fsType = "btrfs";
+    options = [ "defaults" "nofail" ];
   };
 }
